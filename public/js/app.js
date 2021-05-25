@@ -36,7 +36,6 @@ signInBtn.addEventListener('click', ()=>{
         nonS.style.display = "none";
     }).catch(e=>{
         console.log(e);
-        document.querySelector('#theMsg').value = e.toString();
     });
 });
 
