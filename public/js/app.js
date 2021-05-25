@@ -144,11 +144,11 @@ function matchUserMsgs(personName, sender, msg){
         if(personName == sender){
             result = `<div class="mineMsg"><p><xmp>${msg}</xmp></p></div>`;
         }else{
-            result = `<div><small class="nameofSender"><xmp>${sender}</xmp></small><p><xmp>${msg}</xmp></p></div>`;
+            result = `<div><small class="nameofSender">${sender}</small><p><xmp>${msg}</xmp></p></div>`;
 
         }
     }else{
-        result = `<div><small class="nameofSender"><xmp>${sender}</xmp></small><p><xmp>${msg}</xmp></p></div>`;
+        result = `<div><small class="nameofSender">${sender}</small><p><xmp>${msg}</xmp></p></div>`;
     }
     return result;
 }
