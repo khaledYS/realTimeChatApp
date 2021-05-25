@@ -140,15 +140,18 @@ function killThemBro(){
 // function to select the user msgs and make it as his msgs
 function matchUserMsgs(personName, sender, msg){
     var result = "";
+    msg = msg.replace(/</g, "&lt;");
+    msg = msg.replace(/>/g, "&gt;");
+    msg = msg.replace(/"/g, "&quot;");
     if(personName !== null){
         if(personName == sender){
-            result = `<div class="mineMsg"><p><xmp>${msg}</xmp></p></div>`;
+            result = `<div class="mineMsg"><p>${msg}</p></div>`;
         }else{
-            result = `<div><small class="nameofSender">${sender}</small><p><xmp>${msg}</xmp></p></div>`;
+            result = `<div><small class="nameofSender">${sender}</small><p>${msg}</p></div>`;
 
         }
     }else{
-        result = `<div><small class="nameofSender">${sender}</small><p><xmp>${msg}</xmp></p></div>`;
+        result = `<div><small class="nameofSender">${sender}</small><p>${msg}</p></div>`;
     }
     return result;
 }
