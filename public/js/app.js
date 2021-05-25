@@ -142,7 +142,7 @@ function matchUserMsgs(personName, sender, msg){
     var result = "";
     if(personName !== null){
         if(personName == sender){
-            result = `<div class="mineMsg"><p>${msg}</p></div>`;
+            result = `<div class="mineMsg"><p><xmp>${msg}</xmp></p></div>`;
         }else{
             result = `<div><small class="nameofSender"><xmp>${sender}</xmp></small><p>${msg}</p></div>`;
 
