@@ -36,6 +36,7 @@ signInBtn.addEventListener('click', ()=>{
         nonS.style.display = "none";
     }).catch(e=>{
         console.log(e);
+        document.querySelector('#theMsg').value = "";
     });
 });
 
@@ -143,11 +144,11 @@ function matchUserMsgs(personName, sender, msg){
         if(personName == sender){
             result = `<div class="mineMsg"><p>${msg}</p></div>`;
         }else{
-            result = `<div><small class="nameofSender">${sender}</small><p>${msg}</p></div>`;
+            result = `<div><small class="nameofSender"><xmp>${sender}</xmp></small><p>${msg}</p></div>`;
 
         }
     }else{
-        result = `<div><small class="nameofSender">${sender}</small><p>${msg}</p></div>`;
+        result = `<div><small class="nameofSender"><xmp>${sender}</xmp></small><p>${msg}</p></div>`;
     }
     return result;
 }
