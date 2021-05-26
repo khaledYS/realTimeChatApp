@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="nonsigned" style="display: flex;">
+            <h1 class="">sign in to find your friends</h1>
+            <button id="signin">Sign In</button>
+            <div class="custom-select">
+                <select id="favlang">
+                    <option value="English">English</option>
+                    <option value="Arabic">Arabic</option>
+                </select>
+              </div>
+        </div>
+        <div class="signed" style="display: none; height: 100%;">
+            <header id="head" style="direction:rtl">
+                <img src="img/settings.svg" alt="">
+                <span>
+                    <h3>Hi MR </h3>
+                    <h2 id=""></h2>
+                </span>
+            </header>
+            <main class="res"></main>
+            <form  action="" class="msgInput">
+                <input placeholder="write something nice" autocomplete="off" type="text" id="theMsg" >
+                <button value="Send "type="submit" id="submit"><img style="align-self: center;" src="img/send_white_18dp.svg" alt=""></button>
+            </form> 
+        </div>
+    </div>
+    <div class="settings">
+        <img src="img/close.svg" alt="">
+        <div class="accnames">
+            <div class="accname acc-account-label active" data-to="account">Account</div>
+            <div class="accname acc-lang-label" data-to="lang">Language</div>
+        </div>
+        <hr>
+        <div class="accdivs">
+            <div class="accdiv account active"><button id="signout"><span>Log Out</span> <img src="img/logout.svg" alt=""></button></div>
+            <div class="accdiv lang"></div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAKSl9d0xcAO8U-I6QXKlGWz3VJ3z3SOT8",
+        authDomain: "realtime-chat-c9098.firebaseapp.com",
+        databaseURL: "https://realtime-chat-c9098-default-rtdb.firebaseio.com",
+        projectId: "realtime-chat-c9098",
+        storageBucket: "realtime-chat-c9098.appspot.com",
+        messagingSenderId: "756209929938",
+        appId: "1:756209929938:web:80bf83315f55c51361270b",
+        measurementId: "G-FMPC01HJJ4"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="js/otherstuff.js" type="module"></script>
+    <script defer src="js/app.js" type="module"></script>
+</body>
+</html>
