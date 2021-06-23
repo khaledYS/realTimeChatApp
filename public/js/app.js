@@ -179,4 +179,3 @@ function changeIntoEnglish() {
     document.querySelector('.accnames .acc-lang-label').innerText = "Language";
     document.querySelector('.accdivs .account button span').innerText = "Log Out";
 }
- killThemBro()
